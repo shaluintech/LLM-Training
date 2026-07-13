@@ -1,6 +1,0 @@
-python -m venv venv -> To create env
-venv\Script\activate - to activate 
-deactivate
-pip install requests httpx
-pip freeze > requirements.txt
-For install New Device >  pip install -r requirements.txt

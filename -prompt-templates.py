@@ -19,3 +19,5 @@ else:
     Model = ChatGroq(model=MODEL, temperature=0)
     reply = Model.invoke(messages)              
     print("Model translation (French):", reply.content)
+
+
