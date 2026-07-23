@@ -22,9 +22,14 @@ if os.getenv("GROQ_API_KEY"):
     model = ChatGroq(model=MODEL,temperature=0)
     agent = create_agent(model,[add],checkpointer=MemorySaver())
     config = {"configurable":{"thread_id":"Student-1"}}
-    response1 = agent.invoke({"messages":[("human", "Hii my name is Shalu")]},config)
+    response1 = agent.invoke({"messages":[("human", "Hii my name is Shalu,,My age is 21,My full name is Shalu Gupta")]},config)
     print(response1['messages'][-1].content)
     response2 = agent.invoke({"messages":[("human", "What is my name")]},config)
     print(response2['messages'][-1].content)
+    response3 = agent.invoke({"messages":[("human", "What is my age")]},config)
+    print(response3['messages'][-1].content)
+    response4 = agent.invoke({"messages":[("human", "What is my full name")]},config)
+    print(response4['messages'][-1].content)
+    
 else:
     print("NO API KEY")
